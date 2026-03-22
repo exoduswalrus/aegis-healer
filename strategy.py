@@ -1,8 +1,8 @@
 """
-Exp42: ATR_STOP_MULT 4.0 → 3.0 (even tighter stops).
+Exp45: BASE_THRESHOLD 0.012 → 0.015 (require more momentum for entry).
 
-Changes from exp41 (score 21.453):
-1. ATR_STOP_MULT 4.0 → 3.0
+Changes from exp42 (score 22.432):
+1. BASE_THRESHOLD 0.012 → 0.015 — stricter entry threshold filters noisy signals
 """
 
 import numpy as np
@@ -37,7 +37,7 @@ TARGET_VOL = 0.015
 ATR_LOOKBACK = 12
 ATR_STOP_MULT = 3.0
 TAKE_PROFIT_PCT = 99.0
-BASE_THRESHOLD = 0.012
+BASE_THRESHOLD = 0.015
 BTC_OPPOSE_THRESHOLD = -99.0
 
 PYRAMID_THRESHOLD = 0.015
