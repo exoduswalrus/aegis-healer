@@ -1,8 +1,8 @@
 """
-Exp45: BASE_THRESHOLD 0.012 → 0.015 (require more momentum for entry).
+Exp54: Enable drawdown reduction (DD_REDUCE_THRESHOLD 99→0.05, 5% drawdown triggers scale).
 
-Changes from exp42 (score 22.432):
-1. BASE_THRESHOLD 0.012 → 0.015 — stricter entry threshold filters noisy signals
+Changes from exp45 (score 22.537):
+1. DD_REDUCE_THRESHOLD 99.0 → 0.05 — scale down positions at 5% portfolio drawdown
 """
 
 import numpy as np
@@ -45,7 +45,7 @@ PYRAMID_SIZE = 0.0
 CORR_LOOKBACK = 72
 HIGH_CORR_THRESHOLD = 99.0
 
-DD_REDUCE_THRESHOLD = 99.0
+DD_REDUCE_THRESHOLD = 0.05
 DD_REDUCE_SCALE = 0.5
 
 COOLDOWN_BARS = 2
