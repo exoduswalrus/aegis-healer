@@ -1,8 +1,8 @@
 """
-Exp34: VOL_LOOKBACK 36 → 24 (more responsive vol for inverse-vol sizing).
+Exp35: VOL_LOOKBACK 24 → 12 (even more responsive vol).
 
-Changes from exp33 (score 21.253):
-1. VOL_LOOKBACK 36 → 24 hours — faster adaptation to volatility regime changes
+Changes from exp34 (score 21.655):
+1. VOL_LOOKBACK 24 → 12 hours
 """
 
 import numpy as np
@@ -32,7 +32,7 @@ BB_PERIOD = 7
 FUNDING_LOOKBACK = 24
 FUNDING_BOOST = 0.0
 BASE_POSITION_PCT = 0.088
-VOL_LOOKBACK = 24
+VOL_LOOKBACK = 12
 TARGET_VOL = 0.015
 ATR_LOOKBACK = 24
 ATR_STOP_MULT = 5.5
