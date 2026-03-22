@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cyan: #00fff3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #080c0f;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  background: #080c0f;
+  color: #e4e4e7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #0a1015; }
+::-webkit-scrollbar-thumb { background: #1a2a30; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #00fff320; }
+
+/* Selection */
+::selection { background: #00fff320; color: #00fff3; }

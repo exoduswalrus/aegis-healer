@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-03-22T17:56:24.148843+00:00",
+  "generation": 70,
+  "score": 19.522813947203314,
+  "sharpe": 19.522813947203314,
+  "total_return_pct": 29.48855690741008,
+  "max_drawdown_pct": 0.2728294306563229,
+  "num_trades": 3638,
+  "win_rate_pct": 75.04924491135915,
+  "profit_factor": 9.987925168679142,
+  "status": "completed"
+}
