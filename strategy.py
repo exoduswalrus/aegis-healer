@@ -1,8 +1,8 @@
 """
-Exp35: VOL_LOOKBACK 24 → 12 (even more responsive vol).
+Exp39: ATR_LOOKBACK 24 → 12 (consistent with VOL_LOOKBACK=12).
 
-Changes from exp34 (score 21.655):
-1. VOL_LOOKBACK 24 → 12 hours
+Changes from exp35 (score 22.692):
+1. ATR_LOOKBACK 24 → 12 hours
 """
 
 import numpy as np
@@ -34,7 +34,7 @@ FUNDING_BOOST = 0.0
 BASE_POSITION_PCT = 0.088
 VOL_LOOKBACK = 12
 TARGET_VOL = 0.015
-ATR_LOOKBACK = 24
+ATR_LOOKBACK = 12
 ATR_STOP_MULT = 5.5
 TAKE_PROFIT_PCT = 99.0
 BASE_THRESHOLD = 0.012
