@@ -1,8 +1,8 @@
 """
-Exp39: ATR_LOOKBACK 24 → 12 (consistent with VOL_LOOKBACK=12).
+Exp41: ATR_STOP_MULT 5.5 → 4.0 (tighter stops to cut losers faster).
 
-Changes from exp35 (score 22.692):
-1. ATR_LOOKBACK 24 → 12 hours
+Changes from exp39 (score 21.24):
+1. ATR_STOP_MULT 5.5 → 4.0
 """
 
 import numpy as np
@@ -35,7 +35,7 @@ BASE_POSITION_PCT = 0.088
 VOL_LOOKBACK = 12
 TARGET_VOL = 0.015
 ATR_LOOKBACK = 12
-ATR_STOP_MULT = 5.5
+ATR_STOP_MULT = 4.0
 TAKE_PROFIT_PCT = 99.0
 BASE_THRESHOLD = 0.012
 BTC_OPPOSE_THRESHOLD = -99.0
