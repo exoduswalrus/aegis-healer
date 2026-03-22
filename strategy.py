@@ -1,10 +1,8 @@
 """
-Exp33: Implement inverse-vol position sizing (vol_scale was dead code = 1.0).
+Exp34: VOL_LOOKBACK 36 → 24 (more responsive vol for inverse-vol sizing).
 
-Changes from exp32 (score 20.832):
-1. vol_scale = TARGET_VOL / realized_vol (inverse vol sizing, proven production concept)
-2. Capped at [0.5, 2.0] to avoid extreme scaling
-3. More capital deployed in low-vol, less in high-vol → smoother equity curve → better Sharpe
+Changes from exp33 (score 21.253):
+1. VOL_LOOKBACK 36 → 24 hours — faster adaptation to volatility regime changes
 """
 
 import numpy as np
@@ -34,7 +32,7 @@ BB_PERIOD = 7
 FUNDING_LOOKBACK = 24
 FUNDING_BOOST = 0.0
 BASE_POSITION_PCT = 0.088
-VOL_LOOKBACK = 36
+VOL_LOOKBACK = 24
 TARGET_VOL = 0.015
 ATR_LOOKBACK = 24
 ATR_STOP_MULT = 5.5
