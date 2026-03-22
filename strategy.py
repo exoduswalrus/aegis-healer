@@ -1,8 +1,8 @@
 """
-Exp41: ATR_STOP_MULT 5.5 → 4.0 (tighter stops to cut losers faster).
+Exp42: ATR_STOP_MULT 4.0 → 3.0 (even tighter stops).
 
-Changes from exp39 (score 21.24):
-1. ATR_STOP_MULT 5.5 → 4.0
+Changes from exp41 (score 21.453):
+1. ATR_STOP_MULT 4.0 → 3.0
 """
 
 import numpy as np
@@ -35,7 +35,7 @@ BASE_POSITION_PCT = 0.088
 VOL_LOOKBACK = 12
 TARGET_VOL = 0.015
 ATR_LOOKBACK = 12
-ATR_STOP_MULT = 4.0
+ATR_STOP_MULT = 3.0
 TAKE_PROFIT_PCT = 99.0
 BASE_THRESHOLD = 0.012
 BTC_OPPOSE_THRESHOLD = -99.0
