@@ -1,8 +1,8 @@
 """
-Exp54: Enable drawdown reduction (DD_REDUCE_THRESHOLD 99→0.05, 5% drawdown triggers scale).
+Exp105: More aggressive drawdown protection.
 
-Changes from exp45 (score 22.537):
-1. DD_REDUCE_THRESHOLD 99.0 → 0.05 — scale down positions at 5% portfolio drawdown
+Changes from exp54 (score 22.616):
+1. DD_REDUCE_THRESHOLD 0.05 → 0.03 — start scaling at 3% drawdown
 """
 
 import numpy as np
@@ -45,7 +45,7 @@ PYRAMID_SIZE = 0.0
 CORR_LOOKBACK = 72
 HIGH_CORR_THRESHOLD = 99.0
 
-DD_REDUCE_THRESHOLD = 0.05
+DD_REDUCE_THRESHOLD = 0.03
 DD_REDUCE_SCALE = 0.5
 
 COOLDOWN_BARS = 2
