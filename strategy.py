@@ -1,8 +1,12 @@
 """
-Exp105: More aggressive drawdown protection.
+Exp106: Revert regressed parameters back to exp35 values.
 
-Changes from exp54 (score 22.616):
-1. DD_REDUCE_THRESHOLD 0.05 → 0.03 — start scaling at 3% drawdown
+The score degraded from 22.692 (exp35) to 20.044 (exp105) due to:
+1. ATR_LOOKBACK 24→12 + ATR_STOP_MULT 5.5→3.0: stops too tight/noisy
+2. BASE_THRESHOLD 0.012→0.015: fewer entries
+3. DD_REDUCE_THRESHOLD 99→0.03: over-conservative drawdown reduction
+
+Restore: ATR_LOOKBACK=24, ATR_STOP_MULT=5.5, BASE_THRESHOLD=0.012, DD_REDUCE_THRESHOLD=99.0
 """
 
 import numpy as np
@@ -34,10 +38,10 @@ FUNDING_BOOST = 0.0
 BASE_POSITION_PCT = 0.088
 VOL_LOOKBACK = 12
 TARGET_VOL = 0.015
-ATR_LOOKBACK = 12
-ATR_STOP_MULT = 3.0
+ATR_LOOKBACK = 24
+ATR_STOP_MULT = 5.5
 TAKE_PROFIT_PCT = 99.0
-BASE_THRESHOLD = 0.015
+BASE_THRESHOLD = 0.012
 BTC_OPPOSE_THRESHOLD = -99.0
 
 PYRAMID_THRESHOLD = 0.015
@@ -45,7 +49,7 @@ PYRAMID_SIZE = 0.0
 CORR_LOOKBACK = 72
 HIGH_CORR_THRESHOLD = 99.0
 
-DD_REDUCE_THRESHOLD = 0.03
+DD_REDUCE_THRESHOLD = 99.0
 DD_REDUCE_SCALE = 0.5
 
 COOLDOWN_BARS = 2
